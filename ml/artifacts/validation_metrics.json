@@ -1,0 +1,250 @@
+{
+  "cost": {
+    "selected_model": "baseline_logistic",
+    "comparison": {
+      "baseline_logistic": {
+        "roc_auc": 0.7738,
+        "pr_auc": 0.1344,
+        "precision": 0.1066,
+        "recall": 0.75,
+        "f1": 0.1866,
+        "confusion_matrix": [
+          [
+            1149,
+            503
+          ],
+          [
+            20,
+            60
+          ]
+        ]
+      },
+      "hist_gradient_boosting": {
+        "roc_auc": 0.5828,
+        "pr_auc": 0.0636,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1649,
+            3
+          ],
+          [
+            80,
+            0
+          ]
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.729,
+        "pr_auc": 0.095,
+        "precision": 0.04,
+        "recall": 0.0125,
+        "f1": 0.019,
+        "confusion_matrix": [
+          [
+            1628,
+            24
+          ],
+          [
+            79,
+            1
+          ]
+        ]
+      }
+    },
+    "target_distribution": {
+      "train_pos_rate": 0.0081,
+      "val_pos_rate": 0.0462,
+      "train_samples": 3686,
+      "val_samples": 1732
+    }
+  },
+  "schedule": {
+    "selected_model": "hist_gradient_boosting",
+    "comparison": {
+      "baseline_logistic": {
+        "roc_auc": 0.7707,
+        "pr_auc": 0.3541,
+        "precision": 0.3176,
+        "recall": 0.6809,
+        "f1": 0.4332,
+        "confusion_matrix": [
+          [
+            1099,
+            376
+          ],
+          [
+            82,
+            175
+          ]
+        ]
+      },
+      "hist_gradient_boosting": {
+        "roc_auc": 0.861,
+        "pr_auc": 0.6368,
+        "precision": 0.6,
+        "recall": 0.572,
+        "f1": 0.5857,
+        "confusion_matrix": [
+          [
+            1377,
+            98
+          ],
+          [
+            110,
+            147
+          ]
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.8597,
+        "pr_auc": 0.6374,
+        "precision": 0.5399,
+        "recall": 0.6576,
+        "f1": 0.593,
+        "confusion_matrix": [
+          [
+            1331,
+            144
+          ],
+          [
+            88,
+            169
+          ]
+        ]
+      }
+    },
+    "target_distribution": {
+      "train_pos_rate": 0.1842,
+      "val_pos_rate": 0.1484,
+      "train_samples": 3686,
+      "val_samples": 1732
+    }
+  },
+  "implementation": {
+    "selected_model": "xgboost",
+    "comparison": {
+      "baseline_logistic": {
+        "roc_auc": 0.6896,
+        "pr_auc": 0.6925,
+        "precision": 0.7015,
+        "recall": 0.544,
+        "f1": 0.6128,
+        "confusion_matrix": [
+          [
+            668,
+            200
+          ],
+          [
+            394,
+            470
+          ]
+        ]
+      },
+      "hist_gradient_boosting": {
+        "roc_auc": 0.8157,
+        "pr_auc": 0.8036,
+        "precision": 0.7559,
+        "recall": 0.7025,
+        "f1": 0.7283,
+        "confusion_matrix": [
+          [
+            672,
+            196
+          ],
+          [
+            257,
+            607
+          ]
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.8228,
+        "pr_auc": 0.8053,
+        "precision": 0.7585,
+        "recall": 0.6725,
+        "f1": 0.7129,
+        "confusion_matrix": [
+          [
+            683,
+            185
+          ],
+          [
+            283,
+            581
+          ]
+        ]
+      }
+    },
+    "target_distribution": {
+      "train_pos_rate": 0.4712,
+      "val_pos_rate": 0.4988,
+      "train_samples": 3686,
+      "val_samples": 1732
+    }
+  },
+  "overall": {
+    "selected_model": "xgboost",
+    "comparison": {
+      "baseline_logistic": {
+        "roc_auc": 0.7067,
+        "pr_auc": 0.7777,
+        "precision": 0.7803,
+        "recall": 0.4882,
+        "f1": 0.6006,
+        "confusion_matrix": [
+          [
+            532,
+            145
+          ],
+          [
+            540,
+            515
+          ]
+        ]
+      },
+      "hist_gradient_boosting": {
+        "roc_auc": 0.7895,
+        "pr_auc": 0.8446,
+        "precision": 0.8093,
+        "recall": 0.6758,
+        "f1": 0.7366,
+        "confusion_matrix": [
+          [
+            509,
+            168
+          ],
+          [
+            342,
+            713
+          ]
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.8064,
+        "pr_auc": 0.8512,
+        "precision": 0.832,
+        "recall": 0.6806,
+        "f1": 0.7487,
+        "confusion_matrix": [
+          [
+            532,
+            145
+          ],
+          [
+            337,
+            718
+          ]
+        ]
+      }
+    },
+    "target_distribution": {
+      "train_pos_rate": 0.5898,
+      "val_pos_rate": 0.6091,
+      "train_samples": 3686,
+      "val_samples": 1732
+    }
+  }
+}

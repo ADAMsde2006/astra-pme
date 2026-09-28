@@ -1,0 +1,47 @@
+{
+  "training_months": [
+    "2026-04",
+    "2026-05"
+  ],
+  "validation_month": "2026-06",
+  "holdout_month": "2026-07",
+  "feature_names": [
+    "cost_original_cr",
+    "cost_revised_cr",
+    "cost_escalation_pct",
+    "expenditure_cum_cr",
+    "expenditure_ratio",
+    "physical_progress_pct",
+    "progress_expenditure_divergence",
+    "original_duration_months",
+    "revised_duration_months",
+    "schedule_slippage_months",
+    "project_age_months",
+    "time_elapsed_ratio",
+    "progress_velocity",
+    "expenditure_velocity",
+    "has_cost_revision",
+    "has_doc_revision",
+    "is_overdue",
+    "months_overdue",
+    "remaining_cost_cr",
+    "remaining_progress_pct",
+    "expenditure_burn_rate",
+    "progress_burn_rate",
+    "data_confidence_score",
+    "contradiction_count",
+    "parse_flag_count"
+  ],
+  "n_features": 25,
+  "train_samples": 3686,
+  "val_samples": 1732,
+  "holdout_samples": 1775,
+  "total_projects": 2074,
+  "projects_in_all_4_months": 1603,
+  "models": {
+    "cost": "baseline_logistic",
+    "schedule": "hist_gradient_boosting",
+    "implementation": "xgboost",
+    "overall": "xgboost"
+  }
+}

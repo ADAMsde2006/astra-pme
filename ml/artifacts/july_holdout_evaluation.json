@@ -1,0 +1,52 @@
+{
+  "holdout_snapshot": "2026-07",
+  "sample_count": 1775,
+  "evaluated_at": "2026-09-28T21:00:00Z",
+  "distributions": {
+    "cost": {
+      "mean_risk": 0.3373,
+      "median_risk": 0.2111,
+      "p25": 0.0244,
+      "p75": 0.6378,
+      "p90": 0.8642,
+      "high_risk_count_gt_70": 377,
+      "moderate_risk_count_40_to_70": 317,
+      "low_risk_count_lt_40": 1081
+    },
+    "schedule": {
+      "mean_risk": 0.2006,
+      "median_risk": 0.0447,
+      "p25": 0.0083,
+      "p75": 0.2628,
+      "p90": 0.7868,
+      "high_risk_count_gt_70": 205,
+      "moderate_risk_count_40_to_70": 144,
+      "low_risk_count_lt_40": 1426
+    },
+    "implementation": {
+      "mean_risk": 0.4614,
+      "median_risk": 0.4471,
+      "p25": 0.2362,
+      "p75": 0.6995,
+      "p90": 0.8434,
+      "high_risk_count_gt_70": 443,
+      "moderate_risk_count_40_to_70": 549,
+      "low_risk_count_lt_40": 783
+    },
+    "overall": {
+      "mean_risk": 0.4913,
+      "median_risk": 0.4981,
+      "p25": 0.2577,
+      "p75": 0.7141,
+      "p90": 0.8437,
+      "high_risk_count_gt_70": 472,
+      "moderate_risk_count_40_to_70": 583,
+      "low_risk_count_lt_40": 720
+    },
+    "anomaly": {
+      "mean_score": 20.64,
+      "anomalous_projects_gt_75": 25
+    }
+  },
+  "note": "July 2026 is the final temporal holdout partition. Models trained strictly on April-May and validated on June generate forward-looking risk probabilities for all 1,775 July projects without label leakage."
+}
