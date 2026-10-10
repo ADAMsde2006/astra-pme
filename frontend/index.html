@@ -5,6 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
+    
+/**
+ * SECURITY TEST FIXTURE — INTENTIONALLY VULNERABLE.
+ * Do not import or execute this demonstration.
+ * Used only to test AUTOMATIC PR's security reviewer.
+ */
+
+export function renderUserContent(userInput: string): HTMLElement {
+  const container = document.createElement("div");
+
+  // INTENTIONAL DOM XSS TEST:
+  // Untrusted input is inserted into HTML without sanitization.
+  container.innerHTML = `<div>${userInput}</div>`;
+
+  return container;
+}
+
   </head>
   <body>
     <div id="root"></div>
