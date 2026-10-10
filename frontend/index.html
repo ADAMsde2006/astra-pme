@@ -1,13 +1,55 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTOMATIC PR - Security Test Fixture</title>
+</head>
+<body>
+  <h1>Security Review Test Fixture</h1>
+  <p>This file is for static code review only. Do not deploy it.</p>
+
+  <!-- TEST 1: DOM XSS -->
+  <section id="test-dom-xss">
+    <h2>Test 1: Unsafe HTML rendering</h2>
+    <div id="user-output"></div>
+    <script>
+      function renderUserInput(userInput) {
+        // INTENTIONAL VULNERABILITY: untrusted input reaches innerHTML.
+        document.getElementById("user-output").innerHTML = userInput;
+      }
+    </script>
+  </section>
+
+  <!-- TEST 2: Unsafe URL scheme -->
+  <section id="test-unsafe-url">
+    <h2>Test 2: Unvalidated URL</h2>
+    <a id="user-link" href="#">Open user-provided link</a>
+    <script>
+      function setUserLink(userUrl) {
+        // INTENTIONAL VULNERABILITY: URL scheme is not validated.
+        document.getElementById("user-link").href = userUrl;
+      }
+    </script>
+  </section>
+
+  <!-- TEST 3: Dangerous dynamic code execution -->
+  <section id="test-dynamic-code">
+    <h2>Test 3: Dynamic code execution</h2>
+    <script>
+      function calculateExpression(expression) {
+        // INTENTIONAL VULNERABILITY: evaluates a string as JavaScript.
+        return eval(expression);
+      }
+    </script>
+  </section>
+
+  <!-- TEST 4: Missing security attributes -->
+  <section id="test-external-frame">
+    <h2>Test 4: External content frame</h2>
+    <!-- TEST PATTERN: iframe lacks sandbox restrictions. -->
+    <iframe src="https://example.com" title="External content"></iframe>
+  </section>
+</body>
 </html>
