@@ -182,3 +182,4 @@ Open your browser at `http://localhost:5173` to access the ASTRA PME environment
 1. **Temporal Ground Truth:** Ground truth labels are derived exclusively from observed consecutive month-over-month transitions (April → May → June → July). The system does NOT fabricate unverified 12-month future outcomes.
 2. **Deterministic Rules Assistant:** In this version, the decision assistant utilizes deterministic Python rule retrievals and packaged evidence vectors. It operates 100% locally with zero cloud API dependencies.
 3. **Future Extension:** The `AssistantService` is architected with an `EvidencePackager` pattern to allow dropping in Ollama + Qwen 2.5 3B with a Grounding Validator in subsequent releases.
+AUTOMATIC PR review test
